@@ -22,6 +22,19 @@ public class Main {
 
 
         // ESERCIZIO 5
-        //------ //
+        //------ // SELECT * FROM public.fatture a INNER JOIN public.clienti c ON a.id_cliente = c.numero_clienti
+        //WHERE a.importo < '1000.00';
+
+
+        // ESERCIZIO 6
+        //------ // SELECT a.numero_fattura, a.importo, a.iva, a.data_fattura, f.denominazione FROM public.fatture a INNER JOIN public.fornitori f
+        //ON a.numero_fornitore = f.numero_fornitore
+        //;
+
+        // ESERCIZIO 7
+        //------ //SELECT iva , data_fattura FROM public.fatture WHERE iva = 20 AND EXTRACT(YEAR FROM data_fattura)=2016;
+
+        // ESERCIZIO 8
+        //------//SELECT EXTRACT(YEAR FROM data_fattura)AS anno, count(*),SUM(importo) AS somma_importi FROM public.fatture GROUP BY anno
     }
 }
